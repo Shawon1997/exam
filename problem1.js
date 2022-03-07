@@ -6,10 +6,10 @@ app.get("/books", (req, res) => {
     return res.send({ route: "/books" });
 });
 app.get("/libraries", library("permission"), (req, res) => {
-    res.send({ route: "/libraries" });
+    return res.send({ route: "/libraries" });
 });
 app.get("/author", author("permission"), (req, res) => {
-    res.send({ route: "/author" });
+    return res.send({ route: "/author" });
 });
 
 function logger(req, res, next) {
